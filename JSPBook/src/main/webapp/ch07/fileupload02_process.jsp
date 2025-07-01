@@ -16,7 +16,7 @@
 	MultipartRequest multi = new MultipartRequest(request,"C:\\upload", 
 			5*1024*1024, "UTF-8", new DefaultFileRenamePolicy());
 
-	String name1 =multi.getParameter("name1");
+	String name1=multi.getParameter("name1");
 	String subject1=multi.getParameter("subject1");
 	
 	String name2=multi.getParameter("name2");
@@ -32,8 +32,10 @@
 	
 	String file2=(String) files.nextElement();
 	String filename2=multi.getFilesystemName(file2);
+	
 	String file1=(String) files.nextElement();
 	String filename1=multi.getFilesystemName(file1);
+	
 %>
 
 	<table border="1">
@@ -43,17 +45,17 @@
 			<th width="100">파일</th>
 		</tr>
 		<%
-			out.print("<tr><td>"+name1+"</td>");
-			out.print("<tr><td>"+subject1+"</td>");
-			out.println("<td>"+filename1+"</td></tr>\n");
+			out.print("<tr><td>" + name1 + "</td>");
+			out.print("<td>" + subject1 + "</td>");
+			out.println("<td>" + filename1 + "</td></tr>\n");
 			
-			out.print("<tr><td>"+name2+"</td>");
-			out.print("<tr><td>"+subject2+"</td>");
+			out.print("<tr><td>" + name2 + "</td>");
+			out.print("<td>" + subject2 + "</td>");
 			out.println("<td>"+filename2+"</td></tr>\n");
 			
-			out.print("<tr><td>"+name3+"</td>");
-			out.print("<tr><td>"+subject3+"</td>");
-			out.println("<td>"+filename3+"</td></tr>\n");
+			out.print("<tr><td>" + name3 + "</td>");
+			out.print("<td>" + subject3 + "</td>");
+			out.println("<td>" + filename3 + "</td></tr>\n");
 			
 		%>
 	</table>

@@ -12,7 +12,7 @@
 	crossorigin="anonymous"></script>
 <head>
 <meta charset="UTF-8">
-<title>도서 정보</title>
+<title>도서 상세 정보</title>
 </head>
 <body>
 	<div class="container py-4">
@@ -31,7 +31,11 @@
 		%>
 		<!-- 191p -->
 	<div class="row align-items-md-stretch">
-		<div class="col-md-12"> 
+		<div class="col-md-5"> 
+			<img src="./resources/imgages/<%=book.getFilename()%>" 
+				style="width : 70%">
+		</div>
+		<div class="col-md-6">
 			<h3><b><%=book.getName() %></b></h3>
 			<p> <%=book.getDescription()%>
 			<p><b>도서코드 : </b> <span class="badge text-bg-danger"> 
@@ -44,8 +48,8 @@
 			<h4><%=book.getUnitPrice() %>원</h4>
 			<p> <a href="#" class="btn btn-info">도서주문 &raquo;</a>
 			<a href="./books.jsp" class="btn btn-secondary">도서목록 &raduo;</a>
-			
-		</div>
+		</div>	
+		
 	</div>
 	<jsp:include page="footer.jsp"/>
 	</div>
