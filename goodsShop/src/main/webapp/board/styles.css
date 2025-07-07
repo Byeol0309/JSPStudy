@@ -1,0 +1,13 @@
+@charset "UTF-8";
+a {
+    color: #333;             /* 예: 짙은 회색 */
+    text-decoration: none;
+}
+
+a:hover,
+a:focus,
+a:active,
+a:visited {
+    color: #333;
+    text-decoration: none;
+}
